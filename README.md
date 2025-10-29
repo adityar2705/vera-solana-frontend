@@ -37,12 +37,12 @@ This dApp provides a complete, end-to-end user journey, from discovery and verif
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/adityar2705/vera-frontend-solana.git](https://github.com/adityar2705/vera-frontend-solana.git)
+    git clone [https://github.com/adityar2705/vera-frontend-solana.git](https://github.com/adityar2705/vera-solana-frontend.git)
     ```
 
 2.  **Install dependencies:**
     ```bash
-    cd vera-frontend-solana
+    cd vera-solana-frontend
     npm install
     ```
 
