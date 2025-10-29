@@ -34,7 +34,9 @@ export default function VerifyPage() {
   }, [publicKey]);
 
   //this function now only saves to local storage. no on-chain transaction.
-  const handleProof = (result: ISuccessResult) => {
+  // --- THIS IS THE FIX ---
+  // Added an underscore to "result" to silence the unused variable warning
+  const handleProof = (_result: ISuccessResult) => {
     if (!publicKey) return;
 
     setStatus('submitting');
