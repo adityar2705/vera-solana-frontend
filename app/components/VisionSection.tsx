@@ -64,8 +64,9 @@ export function VisionSection() {
           <p style={introSubtitleStyle}>
             At <span style={brandNameStyle}>Urbane Digital Assets</span>, our philosophy is simple: the future of finance is tangible and transparent. 
             Our inaugural protocol, <span style={brandNameStyle}>VERA</span>, is the functioning, on-chain engine built to prove it. 
+            {/* --- THIS IS THE FIX --- */}
             We transform traditionally illiquid assets—like <span style={highlightTextStyle}>municipal revenue bonds</span>—into liquid, accessible digital tokens. 
-            What you see today isn't a concept; it's a live demonstration of how we will fund the cities of tomorrow.
+            What you see today isn&apos;t a concept; it&apos;s a live demonstration of how we will fund the cities of tomorrow.
           </p>
       </div>
 
@@ -126,8 +127,6 @@ const brandNameStyle: React.CSSProperties = {
     color: 'transparent',
 };
 
-// --- THIS IS THE FIX ---
-// The highlight is now a clean, bold white, removing color conflict.
 const highlightTextStyle: React.CSSProperties = {
     fontWeight: 600,
     color: 'var(--text-primary)',
@@ -190,4 +189,3 @@ const comingSoonBadgeStyle: React.CSSProperties = {
   textTransform: 'uppercase',
   border: '1px solid var(--border-color)',
 };
-
