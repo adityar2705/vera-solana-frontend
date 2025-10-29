@@ -7,7 +7,6 @@
 
 ### Infrastructure, Reimagined. (Powered by Solana)
 
-**Live Demo:** *(Add your Vercel deployment link here)*
 **Solana Program:** [View on Solscan Devnet](https://solscan.io/account/72wg7oHFnghg21VrKqLTFrMvr9BnfHTopAZsX2XyZe8?cluster=devnet)
 
 ---
