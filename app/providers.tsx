@@ -8,8 +8,7 @@ import { clusterApiUrl } from '@solana/web3.js';
 import { useMemo } from 'react';
 
 //this line is crucial for the wallet button's styling.
-require('@solana/wallet-adapter-react-ui/styles.css');
-
+import '@solana/wallet-adapter-react-ui/styles.css';
 export function Providers({ children }: { children: React.ReactNode }) {
     //we'll use the devnet for our hackathon build.
     const network = WalletAdapterNetwork.Devnet;
