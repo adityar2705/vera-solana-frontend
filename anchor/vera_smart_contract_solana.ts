@@ -1,0 +1,367 @@
+export type VeraSmartContractSolana = {
+  "version": "0.1.0",
+  "name": "vera_smart_contract_solana",
+  "instructions": [
+    {
+      "name": "createBond",
+      "accounts": [
+        {
+          "name": "bondAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "bondMint",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mintAuthority",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "fundingGoal",
+          "type": "u64"
+        },
+        {
+          "name": "interestRate",
+          "type": "u16"
+        }
+      ]
+    },
+    {
+      "name": "invest",
+      "accounts": [
+        {
+          "name": "bondAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "investorTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "bondMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintAuthority",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "investor",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "settleRevenue",
+      "accounts": [
+        {
+          "name": "bondAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "veraBondAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "name": "fundingGoal",
+            "type": "u64"
+          },
+          {
+            "name": "totalRaised",
+            "type": "u64"
+          },
+          {
+            "name": "interestRate",
+            "type": "u16"
+          },
+          {
+            "name": "totalRevenueDistributed",
+            "type": "u64"
+          },
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "bondMint",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ]
+};
+
+export const IDL: VeraSmartContractSolana = {
+  "version": "0.1.0",
+  "name": "vera_smart_contract_solana",
+  "instructions": [
+    {
+      "name": "createBond",
+      "accounts": [
+        {
+          "name": "bondAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "bondMint",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mintAuthority",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "fundingGoal",
+          "type": "u64"
+        },
+        {
+          "name": "interestRate",
+          "type": "u16"
+        }
+      ]
+    },
+    {
+      "name": "invest",
+      "accounts": [
+        {
+          "name": "bondAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "investorTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "bondMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintAuthority",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "investor",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "settleRevenue",
+      "accounts": [
+        {
+          "name": "bondAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "veraBondAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "name": "fundingGoal",
+            "type": "u64"
+          },
+          {
+            "name": "totalRaised",
+            "type": "u64"
+          },
+          {
+            "name": "interestRate",
+            "type": "u16"
+          },
+          {
+            "name": "totalRevenueDistributed",
+            "type": "u64"
+          },
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "bondMint",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ]
+};
